@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane hgap="10" prefHeight="280.0" prefWidth="138.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+      <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+      <RowConstraints />
+    </rowConstraints>
+    <children>
+      <VBox alignment="CENTER">
+         <children>
+              <ImageView fitHeight="98.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../en.png" />
+                  </image>
+              </ImageView>
+              <Label alignment="CENTER" contentDisplay="CENTER" text="Wirtualny świat" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                  <font>
+                      <Font name="Times New Roman Bold" size="14.0" />
+                  </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" fillWidth="false" prefWidth="100.0" spacing="5.0" GridPane.rowIndex="1">
+         <children>
+              <Button fx:id="closeBtn" cancelButton="true" mnemonicParsing="false" onAction="#handleCloseBtnAction" prefWidth="999.0" text="Zamknij" />
+              <Button fx:id="loadBtn" mnemonicParsing="false" onAction="#loadGame" prefWidth="999.0" text="Wczytaj grę" />
+              <Button fx:id="newgameBtn" defaultButton="true" mnemonicParsing="false" onAction="#handleNewgameBtnAction" prefWidth="999.0" text="Nowa gra" />
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </VBox>
+      <VBox fx:id="nowySwiat" alignment="CENTER" fillWidth="false" prefWidth="100.0" spacing="5.0" visible="false" GridPane.rowIndex="2">
+         <children>
+              <Label fx:id="szer" text="Podaj szerokość" />
+              <TextField fx:id="szerokosc" promptText="Szerokosc" />
+              <Label fx:id="wys" text="Podaj wysokość" />
+              <TextField fx:id="wysokosc" promptText="Wysokosc" />
+            <Button fx:id="go" mnemonicParsing="false" onAction="#handlegoAction" prefWidth="999.0" text="Stwórz" />
+         </children>
+      </VBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</GridPane>
